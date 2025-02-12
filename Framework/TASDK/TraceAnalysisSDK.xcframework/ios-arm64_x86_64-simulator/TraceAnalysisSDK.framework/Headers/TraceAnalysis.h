@@ -277,6 +277,18 @@ extern NSString *const TraceAnalysisLoginTypeFacebookLimited;
  */
 + (void)ThirdpartyLogZFWithPlayerId:(NSString *)playerId gameAccountServer:(NSString *)gameAccountServer thirdparty:(NSString *)thirdparty receiptDataString:(NSString *)receiptDataString;
 
+#pragma mark - Auto ZF log（自动支付上报）
+
+/**
+ 开启自动上报支付
+ */
++ (void)startTransactionObserver;
+
+/**
+ 停止自动上报支付
+ */
++ (void)stopTransactionObserver;
+
 #pragma mark - Active log（在线时长打点）
 
 /**
