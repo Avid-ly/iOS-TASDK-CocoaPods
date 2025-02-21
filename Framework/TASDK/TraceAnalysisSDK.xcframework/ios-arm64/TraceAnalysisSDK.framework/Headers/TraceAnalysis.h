@@ -3,7 +3,7 @@
 
 //
 //  Created by samliu on 2017/7/4.
-//  Copyright © 2017年 samliu. All rights reserved.
+//  Copyright © 2017年  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -288,6 +288,18 @@ extern NSString *const TraceAnalysisLoginTypeFacebookLimited;
  停止自动上报支付
  */
 + (void)stopTransactionObserver;
+
+#pragma mark - StoreKit v2版本 支付上报
+
+/**
+ StoreKit v2版本 内购支付 上报
+ 
+ @param playerId          游戏用户ID
+ @param gameAccountServer 游戏区/服ID
+ @param transactionId     订单ID（Transaction.id）
+ @param jwsRepresentation 内购收据（VerificationResult.jwsRepresentation）
+ */
++ (void)StoreKit2LogZFWithPlayerId:(NSString *)playerId gameAccountServer:(NSString *)gameAccountServer transactionId:(NSString *)transactionId jwsRepresentation:(NSString *)jwsRepresentation extraMap:(NSDictionary *)extraMap;
 
 #pragma mark - Active log（在线时长打点）
 
