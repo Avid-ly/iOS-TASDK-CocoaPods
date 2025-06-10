@@ -5,8 +5,8 @@
 //  Copyright © 2017年 All rights reserved.
 //
 
-#define TASDKVERSION        @"4.1.2.0"
-#define SDKVERSION          @"4120"
+#define TASDKVERSION        @"4.2.0.0"
+#define SDKVERSION          @"4200"
 #define SDKVERSIONBUILD     @"1"
 
-#define TASDKVersionString  @"TASDK_VERSION_4120.1"
+#define TASDKVersionString  @"TASDK_VERSION_4200.1"
