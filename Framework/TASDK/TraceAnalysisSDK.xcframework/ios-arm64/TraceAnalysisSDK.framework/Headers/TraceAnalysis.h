@@ -377,11 +377,20 @@ extern NSString *const TraceAnalysisLoginTypeFacebookLimited;
  */
 + (void)getMeasureWithCmpletion:(void (^)(NSError *error, NSString *measureJson))completionBlock;
 
+#pragma mark - 在线配置
+
+/**
+ 获取用户级别的在线配置
+ */
++ (void)getOnlineConfigWithProductId:(NSString *)productId playerId:(NSString *)playerId completion:(void (^)(NSError *error, NSString *config))completionBlock;
+
 #pragma mark - ATT
 
 /**
  上报ATT授权状态
  */
 + (void)logTrackingAuthorizationStatus;
+
+
 
 @end
