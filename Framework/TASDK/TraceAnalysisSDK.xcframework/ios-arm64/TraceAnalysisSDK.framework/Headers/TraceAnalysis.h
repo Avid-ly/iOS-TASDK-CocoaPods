@@ -382,7 +382,7 @@ extern NSString *const TraceAnalysisLoginTypeFacebookLimited;
 /**
  获取用户级别的在线配置
  */
-+ (void)getOnlineConfigWithProductId:(NSString *)productId playerId:(NSString *)playerId completion:(void (^)(NSError *error, NSString *config))completionBlock;
++ (void)getOnlineConfigWithProductId:(NSString *)productId playerId:(NSString *)playerId isnew:(BOOL)isnew level:(NSString *)level completion:(void (^)(NSError *error, NSString *config))completionBlock;
 
 #pragma mark - ATT
 
