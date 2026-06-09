@@ -391,6 +391,32 @@ extern NSString *const TraceAnalysisLoginTypeFacebookLimited;
  */
 + (void)logTrackingAuthorizationStatus;
 
+#pragma mark - Push Notification
 
+/**
+ 设置fcmToken
+ 
+ @param firebaseId          [FIRAnalytics appInstanceID]
+ @param fcmToken            [[FIRMessaging messaging] tokenWithCompletion:^(NSString *token, NSError *error) {}]; 中的token
+ */
++ (void)setFirebaseId:(NSString *)firebaseId fcmToken:(NSString *)fcmToken;
+
+/**
+ 统计 推送消息 到达事件
+ 在NotificationService类的didReceiveNotificationRequest:withContentHandler:方法中调用
+ 
+ @param userInfo          NotificationService类中didReceiveNotificationRequest:withContentHandler:方法中的request.content.userInfo
+ @param productId         TASDK ProductId
+ */
++ (void)didReceiveNotificationUserInfo:(NSDictionary *)userInfo productId:(NSString *)productId;
+
+/**
+ 统计 推送消息 点击事件
+ 在Appdelegate类的userNotificationCenter:didReceiveNotificationResponse:方法中调用
+ 
+ @param userInfo          Appdelegate类中userNotificationCenter:didReceiveNotificationResponse:方法中的response.notification.request.content.userInfo
+ @param productId         TASDK ProductId
+ */
++ (void)didClickNotificationUserInfo:(NSDictionary *)userInfo productId:(NSString *)productId;
 
 @end
