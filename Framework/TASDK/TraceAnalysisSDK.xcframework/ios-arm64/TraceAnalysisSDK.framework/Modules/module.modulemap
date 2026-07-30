@@ -1,0 +1,6 @@
+framework module TraceAnalysisSDK {
+  umbrella header "TraceAnalysis.h"
+
+  export *
+  module * { export * }
+}
